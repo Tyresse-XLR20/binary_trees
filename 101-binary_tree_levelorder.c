@@ -10,8 +10,8 @@ void pop(levelorder_queue_t **head);
 /**
  * binary_tree_levelorder - Goes through a bin-tree by level-order traversal.
  *
- * @tree: a pointer to the root node of the tree to traverse.
- * @func: a pointer to a function to call for each node.
+ * @tree: A pointer to the root node of the tree to traverse.
+ * @func: A pointer to a function to call for each node.
  */
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 {
@@ -32,11 +32,11 @@ void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 }
 
 /**
- * create_node - creates a new levelorder_queue_t node.
+ * create_node - Creates a new levelorder_queue_t node.
  *
- * @node: the binary tree node for the new node to contain.
+ * @node: The binary tree node for the new node to contain.
  *
- * Return: if an error occurs, NULL.
+ * Return: If an error occurs, NULL.
  *         Otherwise, a pointer to the new node.
  */
 levelorder_queue_t *create_node(binary_tree_t *node)
@@ -54,15 +54,15 @@ levelorder_queue_t *create_node(binary_tree_t *node)
 }
 
 /**
- * pint_push - runs a function on a given binary tree node and
+ * pint_push - Runs a function on a given binary tree node and
  *             pushes its children into a levelorder_queue_t queue.
  *
- * @node: the binary tree node to print and push.
- * @head: a double pointer to the head of the queue.
- * @tail: a double pointer to the tail of the queue.
- * @func: a pointer to the function to call on @node.
+ * @node: The binary tree node to print and push.
+ * @head: A double pointer to the head of the queue.
+ * @tail: A double pointer to the tail of the queue.
+ * @func: A pointer to the function to call on @node.
  *
- * Description: upon malloc failure, exits with a status code of 1.
+ * Description: Upon malloc failure, exits with a status code of 1.
  */
 void pint_push(binary_tree_t *node, levelorder_queue_t *head,
 		levelorder_queue_t **tail, void (*func)(int))
